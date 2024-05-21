@@ -18,6 +18,10 @@ namespace net8Practice.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// 註解:Get Function
+        /// </summary>
+        /// <returns></returns>
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
