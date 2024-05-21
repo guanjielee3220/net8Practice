@@ -1,5 +1,6 @@
 
 using Microsoft.OpenApi.Models;
+using net8Practice.Filter;
 using System.Reflection;
 
 namespace net8Practice
@@ -41,6 +42,10 @@ namespace net8Practice
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+                #endregion
+
+                #region 條列出 Enum 內容
+                c.SchemaFilter<EnumSchemaFilter>();
                 #endregion
             });
 
