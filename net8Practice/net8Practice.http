@@ -1,0 +1,6 @@
+@net8Practice_HostAddress = http://localhost:5201
+
+GET {{net8Practice_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
